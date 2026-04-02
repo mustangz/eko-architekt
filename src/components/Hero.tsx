@@ -33,7 +33,7 @@ export default function Hero() {
         <p className="hero-tagline text-sm md:text-base tracking-[0.3em] uppercase mb-4 text-white/80">
           Pracownia Architektoniczna
         </p>
-        <h1 className="hero-title text-5xl md:text-7xl lg:text-8xl font-heading font-bold tracking-tight mb-6">
+        <h1 className="hero-title text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-heading font-bold tracking-tight mb-6">
           EKO ARCHITEKT
         </h1>
         <p className="hero-subtitle text-lg md:text-xl max-w-2xl text-white/90 leading-relaxed">

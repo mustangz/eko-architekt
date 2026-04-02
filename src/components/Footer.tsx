@@ -63,7 +63,7 @@ export default function Footer() {
             <p className="text-sm leading-relaxed mb-4">
               Zapisz się, aby otrzymywać informacje o nowych projektach i szkoleniach.
             </p>
-            <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
+            <form className="flex flex-col sm:flex-row gap-2" onSubmit={(e) => e.preventDefault()}>
               <input
                 type="email"
                 placeholder="Twój email"

@@ -49,7 +49,7 @@ export default function Projects() {
             <button
               key={cat.key}
               onClick={() => setActiveCategory(cat.key)}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-4 py-2 sm:px-5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${
                 activeCategory === cat.key
                   ? "bg-wood text-white shadow-md"
                   : "bg-warm-white text-charcoal-light hover:bg-wood/10 border border-wood/20"

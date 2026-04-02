@@ -21,9 +21,15 @@ export function useScrollReveal(threshold = 0.15) {
       { threshold, rootMargin: "0px 0px -50px 0px" }
     );
 
-    const revealElements = el.querySelectorAll(".reveal");
+    // Observe all reveal variants
+    const selectors = ".reveal, .reveal-left, .reveal-right, .reveal-scale";
+    const revealElements = el.querySelectorAll(selectors);
     revealElements.forEach((child) => observer.observe(child));
-    if (el.classList.contains("reveal")) observer.observe(el);
+
+    const revealClasses = ["reveal", "reveal-left", "reveal-right", "reveal-scale"];
+    if (revealClasses.some((c) => el.classList.contains(c))) {
+      observer.observe(el);
+    }
 
     return () => observer.disconnect();
   }, [threshold]);

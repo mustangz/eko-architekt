@@ -16,7 +16,7 @@ export default function Contact() {
   return (
     <section id="kontakt" className="relative py-24 md:py-32 bg-warm-beige section-wave-top">
       <div ref={ref} className="max-w-6xl mx-auto px-6 relative z-10">
-        <div className="grid md:grid-cols-2 gap-16">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-16">
           {/* Info */}
           <div className="reveal">
             <p className="text-wood text-sm tracking-[0.2em] uppercase mb-4">Kontakt</p>

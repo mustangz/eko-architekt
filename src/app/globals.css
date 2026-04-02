@@ -93,7 +93,40 @@ h1, h2, h3, h4 {
 
 .reveal.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) translateX(0);
+}
+
+/* Slide from left variant */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.reveal-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide from right variant */
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.reveal-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scale up variant */
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .reveal-stagger > .reveal:nth-child(1) { transition-delay: 0ms; }
@@ -159,7 +192,7 @@ h1, h2, h3, h4 {
   top: -1px;
   left: 0;
   right: 0;
-  height: 60px;
+  height: clamp(30px, 8vw, 60px);
   background: var(--color-warm-white);
   clip-path: ellipse(55% 100% at 50% 0%);
   z-index: 1;
@@ -174,10 +207,41 @@ h1, h2, h3, h4 {
   bottom: -1px;
   left: 0;
   right: 0;
-  height: 60px;
+  height: clamp(30px, 8vw, 60px);
   background: var(--color-warm-white);
   clip-path: ellipse(55% 100% at 50% 100%);
   z-index: 1;
+}
+
+/* ============================================
+   LOADER ANIMATION
+   ============================================ */
+
+@keyframes lineExpand {
+  0% { width: 0; }
+  100% { width: 80px; }
+}
+
+@keyframes loaderFadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.loader-line {
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, transparent, var(--color-wood), transparent);
+  animation: lineExpand 1s ease-out 0.2s forwards;
+}
+
+.loader-title {
+  opacity: 0;
+  animation: loaderFadeUp 0.8s ease-out 0.5s forwards;
+}
+
+.loader-subtitle {
+  opacity: 0;
+  animation: loaderFadeUp 0.8s ease-out 0.8s forwards;
 }
 
 /* Lightbox fade */

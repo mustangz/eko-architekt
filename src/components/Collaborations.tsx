@@ -16,7 +16,7 @@ export default function Collaborations() {
 
         {/* Domy ze Słomy */}
         <ScrollReveal>
-          <div className="reveal bg-warm-beige rounded-2xl overflow-hidden card-lift">
+          <div className="reveal-scale bg-warm-beige rounded-2xl overflow-hidden card-lift">
             <div className="grid md:grid-cols-2">
               <div className="p-8 md:p-12 flex flex-col justify-center">
                 <h3 className="text-2xl md:text-3xl font-heading font-bold mb-6">
@@ -61,7 +61,7 @@ export default function Collaborations() {
 
         {/* GTF */}
         <ScrollReveal>
-          <div className="reveal bg-warm-beige rounded-2xl overflow-hidden mt-8 card-lift">
+          <div className="reveal-scale bg-warm-beige rounded-2xl overflow-hidden mt-8 card-lift">
             <div className="p-8 md:p-12">
               <h3 className="text-2xl md:text-3xl font-heading font-bold mb-6">
                 GTF
