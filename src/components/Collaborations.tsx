@@ -59,19 +59,47 @@ export default function Collaborations() {
           </div>
         </ScrollReveal>
 
-        {/* GTF */}
+        {/* GTF — Grunt to Fundament */}
         <ScrollReveal>
           <div className="reveal-scale bg-warm-beige rounded-2xl overflow-hidden mt-8 card-lift">
-            <div className="p-8 md:p-12">
-              <h3 className="text-2xl md:text-3xl font-heading font-bold mb-6">
-                GTF
-              </h3>
-              <p className="text-charcoal-light leading-relaxed">
-                Zaprzyjaźniona firma specjalizująca się w płytach fundamentowych.
-                Solidne fundamenty to podstawa każdego domu — dlatego współpracujemy
-                z GTF, łącząc sprawdzoną technologię fundamentów z naszymi projektami
-                w konstrukcji drewnianej i murowanej.
-              </p>
+            <div className="grid md:grid-cols-[1fr_auto] items-center">
+              <div className="p-8 md:p-12">
+                <h3 className="text-2xl md:text-3xl font-heading font-bold mb-6">
+                  Grunt to Fundament
+                </h3>
+                <p className="text-charcoal-light leading-relaxed mb-6">
+                  Zaprzyjaźniona firma specjalizująca się w płytach fundamentowych.
+                  Solidne fundamenty to podstawa każdego domu — dlatego współpracujemy
+                  z GTF, łącząc sprawdzoną technologię fundamentów
+                  z naszymi projektami w konstrukcji drewnianej i murowanej.
+                </p>
+                <a
+                  href="https://grunttofundament.pl/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-wood font-medium hover:text-wood-dark transition-colors link-underline"
+                >
+                  grunttofundament.pl
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+              <div className="px-8 pb-8 md:p-12 flex items-center justify-center">
+                <a
+                  href="https://grunttofundament.pl/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src="/images/logo-gtf.svg"
+                    alt="Grunt to Fundament — logo"
+                    width={180}
+                    height={88}
+                    className="opacity-80 hover:opacity-100 transition-opacity"
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </ScrollReveal>
