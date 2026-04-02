@@ -1,3 +1,5 @@
+import ScrollReveal from "./ScrollReveal";
+
 const services = [
   {
     icon: (
@@ -35,31 +37,35 @@ export default function Services() {
   return (
     <section id="uslugi" className="py-24 md:py-32 bg-warm-white">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="text-wood text-sm tracking-[0.2em] uppercase mb-4">Oferta</p>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold">
-            Zakres usług
-          </h2>
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-16 reveal">
+            <p className="text-wood text-sm tracking-[0.2em] uppercase mb-4">Oferta</p>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold">
+              Zakres usług
+            </h2>
+          </div>
+        </ScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {services.map((service, i) => (
-            <div
-              key={i}
-              className="bg-warm-beige rounded-lg p-8 text-center hover:shadow-lg transition-shadow duration-300"
-            >
-              <div className="text-wood mb-6 flex justify-center">
-                {service.icon}
+        <ScrollReveal stagger>
+          <div className="grid md:grid-cols-3 gap-8">
+            {services.map((service, i) => (
+              <div
+                key={i}
+                className="reveal card-lift bg-warm-beige rounded-lg p-8 text-center"
+              >
+                <div className="text-wood mb-6 flex justify-center">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-heading font-semibold mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-charcoal-light leading-relaxed text-sm">
+                  {service.description}
+                </p>
               </div>
-              <h3 className="text-xl font-heading font-semibold mb-4">
-                {service.title}
-              </h3>
-              <p className="text-charcoal-light leading-relaxed text-sm">
-                {service.description}
-              </p>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
