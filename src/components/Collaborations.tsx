@@ -53,6 +53,20 @@ export default function Collaborations() {
             </div>
           </div>
         </div>
+        {/* GTF */}
+        <div className="bg-warm-beige rounded-2xl overflow-hidden mt-8">
+          <div className="p-8 md:p-12">
+            <h3 className="text-2xl md:text-3xl font-heading font-bold mb-6">
+              GTF
+            </h3>
+            <p className="text-charcoal-light leading-relaxed">
+              Zaprzyjaźniona firma specjalizująca się w płytach fundamentowych.
+              Solidne fundamenty to podstawa każdego domu — dlatego współpracujemy
+              z GTF, łącząc sprawdzoną technologię fundamentów z naszymi projektami
+              w konstrukcji drewnianej i murowanej.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
