@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Loader() {
   const [visible, setVisible] = useState(true);
@@ -23,11 +24,23 @@ export default function Loader() {
         fadeOut ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
-      <div className="text-center">
+      <div className="text-center flex flex-col items-center">
+        {/* Logo image */}
+        <div className="loader-title mb-6">
+          <Image
+            src="/images/logo-eko.png"
+            alt="EKO ARCHITEKT"
+            width={100}
+            height={100}
+            className="rounded-full"
+            priority
+          />
+        </div>
+
         {/* Animated line */}
         <div className="loader-line mx-auto mb-8" />
 
-        {/* Logo */}
+        {/* Logo text */}
         <h1 className="loader-title text-3xl md:text-5xl font-heading font-bold text-white tracking-wider">
           EKO ARCHITEKT
         </h1>

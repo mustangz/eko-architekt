@@ -18,6 +18,10 @@ export const metadata: Metadata = {
   title: "EKO ARCHITEKT — Architektura w drewnie",
   description:
     "Pracownia architektoniczna specjalizująca się w konstrukcji drewnianej, projektach murowanych oraz przebudowach budynków zabytkowych.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const links = [
   { href: "#pracownia", label: "Pracownia" },
@@ -55,11 +56,22 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <a
           href="#"
-          className={`text-xl font-heading font-bold tracking-wider transition-colors ${
-            scrolled ? "text-charcoal" : "text-white"
-          }`}
+          className="flex items-center gap-3"
         >
-          EKO ARCHITEKT
+          <Image
+            src="/images/logo-eko.png"
+            alt="EKO ARCHITEKT"
+            width={36}
+            height={36}
+            className="rounded-full"
+          />
+          <span
+            className={`text-xl font-heading font-bold tracking-wider transition-colors ${
+              scrolled ? "text-charcoal" : "text-white"
+            }`}
+          >
+            EKO ARCHITEKT
+          </span>
         </a>
 
         {/* Desktop */}
